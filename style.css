@@ -8,9 +8,9 @@
   font-weight: 400;
   line-height: 26px;
 }
-.item-title {
+.section-title {
   color: #131313;
-  font-size: 4rem;
+  font-size: 2.8rem;
   font-weight: 700;
 }
 .btn-primary {
@@ -51,9 +51,9 @@ nav {
   text-decoration: none;
   color: #424242;
 }
-.g3-title {
+.banner-title {
   color: #131313;
-  font-size: 2.8rem;
+  font-size: 4rem;
   font-weight: 700;
 }
 /* header styles */
@@ -102,46 +102,66 @@ main {
   font-weight: 700;
 }
 
+/* facts section style */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.facts-card-container .card {
+  border-radius: 8px;
+  border: 1px solid #ff900e;
+  text-align: center;
+  padding: 30px;
+}
+.facts-card-container{
+  display:flex;
+  justify-content: space-around;
+}
+.facts-card-container .card-stats{
+  font-size: 2.8rem;
+  color: #424242;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.card-title{
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+/* sponsored section styles */
+.sponsors-section{
+  text-align: center;
+}
+.sponsors-img-container{
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2.5rem;
+}
+.sponsors-img-container img{
+  width: 10rem;
+  filter: grayscale(100%);
+}
+.sponsors-img-container img:hover{
+  filter: grayscale(0);
+}
 
 /* responsive styles */
 
 /* mobile devices */
 
 @media screen and (max-width: 576px) {
-  .g3-title{
+  .g3-title {
     text-align: center;
     font-size: 2rem;
   }
-  .banner-title{
+  .banner-title {
     font-size: 3rem;
   }
   header {
     padding: 20px;
   }
   nav,
-  .navigation ul {
+  .navigation ul{
     flex-direction: column;
     align-items: center;
   }
@@ -156,6 +176,15 @@ main {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
   }
+  .facts-card-container{
+    gap: 20px;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    flex-direction: column;
+  }
+  .sponsors-img-container{
+    flex-direction: column;
+  }
 }
 
 /*tablet devices */
@@ -163,9 +192,8 @@ main {
   header {
     padding: 50px;
   }
-  nav,
-  .navigation ul {
-    flex-direction: column;
+  nav {
+    flex-direction: column-reverse;
     align-items: center;
   }
   .features-section {
@@ -176,4 +204,15 @@ main {
     padding-left: 1.2rem;
     padding-right: 1.2rem;
   }
+  .facts-card-container{
+    gap: 20px;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sponsors-img-container{
+    flex-direction: column;
+  }
 }
+
