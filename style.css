@@ -181,6 +181,7 @@ main {
 .sponsors-img-container img {
   width: 10rem;
   filter: grayscale(100%);
+  transition: all .3s linear;
 }
 .sponsors-img-container img:hover {
   filter: grayscale(0);
